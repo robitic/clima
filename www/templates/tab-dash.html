@@ -1,0 +1,21 @@
+<ion-view view-title="{{clima.name}}">
+  <ion-content class="padding">
+    <ion-refresher
+    pulling-text="Pull to refresh..."
+    on-refresh="">
+  </ion-refresher>
+    <ion-list>
+	<div align="center">
+	 <h1></h1>
+	 <h2>Temp. MIN: </h2>
+	 <h3>{{clima.main.temp_max}}°</h3>
+	 <h2>Temp. MAX: </h2>
+	 <h3>{{clima.main.temp_max}}°</h3>
+	 </div>
+	 <div align="center">
+	 <img ng-src="http://openweathermap.org/img/w/{{clima.weather[0].icon}}.png" >
+	 </div>
+	 
+    </ion-list>
+  </ion-content>
+</ion-view>

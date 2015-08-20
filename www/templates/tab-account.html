@@ -1,0 +1,22 @@
+<ion-view view-title="Configuracion">
+  <ion-content>
+  <div align="center">
+  <label for="option_ciudad">Ciudad</label>
+   <input ng-model="settings.ciudad" ng-change="changeValues()" >
+  </div>
+   <br/>
+   <div align="center">
+   <label for="option_ciudad">Dias</label>
+   <input ng-model="settings.dia" ng-change="changeValues()">
+   </div>
+   <br/>
+   <div align="center"
+   <label for="option_ciudad">Medida</label>
+   <select ng-model="settings.unidad" ng-change="changeValues()">
+   	<option value="metric">°C</option>
+   	<option value="imperial">°F</option>
+   	<option value="">°K</option>
+   </select>
+   </div>
+  </ion-content>
+</ion-view>

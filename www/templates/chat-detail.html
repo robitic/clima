@@ -1,0 +1,29 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="{{chat.dt_txt}}">
+  <ion-content class="padding">
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" >
+	    <div>
+        <img ng-src="http://openweathermap.org/img/w/{{chat.weather[0].icon}}.png">
+		</div>
+		<div>
+          <h2>{{chat.dt *1000 | date: 'medium'}}</h2>
+		</div>
+		<div>
+        <p>Temp. MIN: {{chat.main.temp_min}}°</p>
+		<p>Temp. MAX: {{chat.main.temp_max}}°</p>
+		</div>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
+
